@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="display-4 p-4">
+            Courses
+        </div>
+    <ul>
+        <li th:each="course : ${courses}" >
+            <dl>
+            <dt th:text="${course.code}" class="fw-bold"></dt>
+            </dt>
+            <dd th:text="${course.title}"></dt>
+            <dd th:text="'Grade ' + ${course.grade}"></dt>
+            </dl>
+        </li>
+    </ul> 
+</div>
+</body>
+</html>
